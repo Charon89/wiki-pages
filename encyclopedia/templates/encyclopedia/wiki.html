@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div style="width: 100px;">
+    <h6 style="background-color: green; color: white;">{{ message }}</h6>
+</div>
+
+<div style="border: 3px solid lightblue; padding: 20px; margin-right: 16px;">
+    {{ page|safe }}
+<a href="/edit/{{title}}">Edit Page</a>
+</div>
+{% endblock %}
