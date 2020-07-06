@@ -2,12 +2,10 @@ from django.shortcuts import render
 import markdown2
 from . import util
 
-
 def index(req):
     return render(req, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
-
 
 def wikiEntry(request, name):
     # calling list of entries
